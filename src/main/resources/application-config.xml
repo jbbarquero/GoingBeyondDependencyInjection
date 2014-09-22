@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean id="simpleBean" class="com.pivotal.springone.gbdi.SimpleBean" init-method="anInitMethod"/>
+	<!-- TODO-01: Add init method -->
+	
+	<!-- TODO-02: Enable Annotation Config -->
+	<context:annotation-config />
+	
+	<!-- TODO-03: Add a BeanFactoryPostProcessor  -->
+	<bean class="com.pivotal.springone.gbdi.SimpleBeanFactoryPostProcessor" >
+		<property name="simpleBean" ref="simpleBean"></property>
+	</bean>
+	
+	<!-- TODO-04: Add a simple BeanPostProcessor -->
+	<bean class="com.pivotal.springone.gbdi.SimpleBeanPostProcessor" />
+	
+	<!-- TODO-05: Add another bean declaration. How many times will BFPP and BPP be called? -->
+</beans>

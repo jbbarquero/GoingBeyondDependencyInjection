@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: 85%;
+  font-family: arial,verdana,sans-serif;
+  background-color: #eeeeee;
+}
+
+.niceTable {
+  border: solid 1px #a8a8a8;
+  padding: 3px;
+  text-align: left; 
+  width: auto;
+  margin: 3px;
+  border-collapse: collapse;
+}
+
+.niceTableCell {
+  border: solid 1px #a8a8a8;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
